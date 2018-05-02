@@ -1,0 +1,118 @@
+<div ng-controller="AdminController">
+
+    <div class="container">
+        <h2>Admin Panel</h2>
+
+        <ul class="nav nav-pills">
+            <li class="active"  ng-click="setStorage('studentData')"><a data-toggle="pill" data-target="#studentinfo">Students Tab</a></li>
+            <li  ng-click="setStorage('teacherData')"><a data-toggle="pill" data-target="#teacherinfo">Teachers Tab</a></li>
+            <li><a data-toggle="pill" data-target="#classinfo">Class Tab</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div id="studentinfo" class="tab-pane fade in active">
+                <h3>Add Students
+                    <button class="btn btn-info" ng-click="addStudentDetails()" title="Add New Data">
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </h3>
+                <div class="card-data">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="(key,value) in students[0]">{{key | capitalize}}</th>
+                                <th ng-show="students[0]">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div ng-hide="students[0]" class="bg-primary info">No Students Left -_-</div>
+                            <tr ng-repeat="student in students" ng-style="pointer">
+                                <td ng-repeat="data in student">
+                                    {{data}}
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary" ng-click="editStudentDetails($index)" title="Edit Data">
+                                      <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                                    <button class="btn btn-danger" ng-click="delete($index,'studentData')" title="Delete Data">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="teacherinfo" class="tab-pane fade">
+                <h3>Add Teachers
+                  <button class="btn btn-info" ng-click="addTeacherDetails()" title="Add New Data">
+                    <span class="glyphicon glyphicon-plus"></span>
+                  </button>
+                </h3>
+                <div class="card-data">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="(key,value) in teachers[0]">{{key | capitalize}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div ng-hide="teachers[0]" class="bg-primary info">No Teachers Left -_-</div>
+                            <tr ng-repeat="teacher in teachers">
+                                <td ng-repeat="data in teacher">
+                                    {{data}}
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary" ng-click="editTeacherDetails($index)" title="Edit Data">
+                                      <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                                    <button class="btn btn-danger" ng-click="delete($index,'teacherData')" title="Delete Data">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="classinfo" class="tab-pane fade">
+                <h3>Add Classes
+                <button class="btn btn-info" ng-click="addClass()" title="Add New Data">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </h3>
+                <table class="table table-hover table-striped">
+                    <thead>
+                      <tr>
+                          <th ng-repeat="(key,value) in class[0]">{{key | capitalize}}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <div ng-hide="class[0]" class="bg-primary info">No Classes Created -_-</div>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit-modal" ng-show="isEditable">
+        <button class="pull-right btn" ng-click="modalHide()"><span class="closeModal">&times;</span></button>
+        <div class="edit-card">
+            <div class="card-header">
+                <span class="glyphicon glyphicon-edit"></span>
+                <span ng-if="action==='update'">Edit</span>
+                <span ng-if="action==='add'">Add</span>
+            </div>
+            <form role="form" name="updateForm" ng-submit="submitChange()" novalidate>
+                <div class="form-group container-fluid" ng-repeat="(key,value) in detail">
+                    <label for="{{key}}" class="control-label col-xs-4">{{key}}</label>
+                    <input type="text" id="{{key}}" name="{{key}}" class="col-xs-8 input-field" ng-model="dataModel[key]" required>
+                </div>
+                <button type="submit" class="btn btn-primary" ng-disabled="updateForm.$invalid">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+</div>

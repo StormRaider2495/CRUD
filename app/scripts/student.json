@@ -1,0 +1,109 @@
+[{
+        "name": "Gracie Sykes",
+        "age": 21,
+        "gender": "female",
+        "email": "graciesykes@zaj.com",
+        "phone": "(965) 473-3248",
+        "address": "587 Veranda Place, Cawood, Rhode Island, 5183",
+        "cgpa": 6
+    },
+    {
+        "name": "Valencia Hurst",
+        "age": 19,
+        "gender": "male",
+        "email": "valenciahurst@zaj.com",
+        "phone": "(909) 547-2245",
+        "address": "681 Midwood Street, Cornfields, New Jersey, 6550",
+        "cgpa": 9
+    },
+    {
+        "name": "Stout Burns",
+        "age": 19,
+        "gender": "male",
+        "email": "stoutburns@zaj.com",
+        "phone": "(871) 536-2407",
+        "address": "606 Sullivan Street, Indio, Colorado, 3845",
+        "cgpa": 9
+    },
+    {
+        "name": "Penny Hansen",
+        "age": 22,
+        "gender": "female",
+        "email": "pennyhansen@zaj.com",
+        "phone": "(806) 449-3976",
+        "address": "135 Everit Street, Coyote, Texas, 6068",
+        "cgpa": 6
+    },
+    {
+        "name": "Palmer Benton",
+        "age": 22,
+        "gender": "male",
+        "email": "palmerbenton@zaj.com",
+        "phone": "(879) 535-2441",
+        "address": "918 Clarkson Avenue, Wheaton, Wisconsin, 3970",
+        "cgpa": 8
+    },
+    {
+        "name": "Dale Wilson",
+        "age": 22,
+        "gender": "female",
+        "email": "dalewilson@zaj.com",
+        "phone": "(846) 400-3984",
+        "address": "109 Madison Place, Nipinnawasee, Delaware, 1908",
+        "cgpa": 6
+    },
+    {
+        "name": "Eunice Blake",
+        "age": 22,
+        "gender": "female",
+        "email": "euniceblake@zaj.com",
+        "phone": "(898) 536-3225",
+        "address": "351 Division Place, Chloride, Louisiana, 4310",
+        "cgpa": 7
+    },
+    {
+        "name": "Blair Terry",
+        "age": 19,
+        "gender": "male",
+        "email": "blairterry@zaj.com",
+        "phone": "(922) 508-2563",
+        "address": "595 Maple Street, Bayview, Missouri, 234",
+        "cgpa": 8
+    },
+    {
+        "name": "Ila Conrad",
+        "age": 21,
+        "gender": "female",
+        "email": "ilaconrad@zaj.com",
+        "phone": "(874) 503-2961",
+        "address": "790 Gain Court, Wanship, Tennessee, 8212",
+        "cgpa": 10
+    },
+    {
+        "name": "Delgado Richards",
+        "age": 21,
+        "gender": "male",
+        "email": "delgadorichards@zaj.com",
+        "phone": "(973) 544-2057",
+        "address": "620 Canda Avenue, Machias, District Of Columbia, 5294",
+        "cgpa": 10
+    },
+    {
+        "name": "Robles Blair",
+        "age": 22,
+        "gender": "male",
+        "email": "roblesblair@zaj.com",
+        "phone": "(801) 600-2453",
+        "address": "121 Cleveland Street, Kimmell, North Carolina, 8639",
+        "cgpa": 10
+    },
+    {
+        "name": "Zelma Jarvis",
+        "age": 21,
+        "gender": "female",
+        "email": "zelmajarvis@zaj.com",
+        "phone": "(914) 499-2732",
+        "address": "973 Laurel Avenue, Biddle, Kansas, 3131",
+        "cgpa": 8
+    }
+]

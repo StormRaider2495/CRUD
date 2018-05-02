@@ -1,0 +1,17 @@
+[{
+        "id": "0",
+        "time": "9:30",
+        "duration": "3",
+        "subject": "Java",
+        "teacher": "Gracie Sykes",
+        "students": ""
+    },
+    {
+        "id": "1",
+        "time": "12:30",
+        "duration": "3",
+        "subject": "Java",
+        "teacher": "Gracie Sykes",
+        "students": ""
+    }
+]

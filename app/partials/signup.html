@@ -1,0 +1,86 @@
+<section class="container-fluid login" ng-controller="SignupController">
+
+    <div class="container col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+
+        <form class="form-horizontal" role="form" name="signupForm" ng-submit="signup()" novalidate>
+            <div class="jumbotron">
+                <h3>SUBMIT</h3>
+            </div>
+            <div class="form-group" ng-class="{'has-error':signupForm.username.$error.required && signupForm.username.$dirty }">
+                <!-- <label for="username" class="col-sm-2 control-label">Username</label> -->
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                        </span>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" ng-model="register.username" autocomplete="off" required>
+                    </div>
+                    <span ng-show="signupForm.username.$dirty">
+                    <span ng-show="signupForm.username.$error.required" class="text-danger bg-danger help-block">
+                      Firstname is required.
+                    </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <select class="form-control" ng-model="register.usertype">
+                       <!-- ng-options="option.value as option.label for option in options"> -->
+                        <option value="">Select User Type</option>
+                        <option value="admin" ng-hide="isadminTaken" ng-disabled="isadminTaken">Admin</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                    <span ng-show="invalidChannelSelection" class="text-danger bg-danger">Select a user type</span>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error':signupForm.password.$error.required && signupForm.password.$dirty }">
+                <!-- <label for="password" class="col-sm-2 control-label">Password</label> -->
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                        </span>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+                        ng-model="register.password" autocomplete="off" required>
+                    </div>
+                    <span ng-show="signupForm.password.$dirty">
+                    <span ng-show="signupForm.password.$error.required" class="text-danger bg-danger help-block">
+                      Password is required.
+                    </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error':signupForm.confirmPassword.$error.required && signupForm.confirmPassword.$dirty }">
+                <!-- <label for="password" class="col-sm-2 control-label">Password</label> -->
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                      </span>
+                      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                      ng-model="register.confirmPassword" placeholder="Re-enter password" autocomplete="off" required>
+                    </div>
+                    <span ng-show="signupForm.confirmPassword.$dirty">
+                    <span ng-show="signupForm.confirmPassword.$error.required" class="help-block">
+                      Re-enter Your Password Again.
+                    </span>
+                    </span>
+                    <span ng-show="passNotMatched" class="text-danger bg-danger">
+                      Enter the Same Password again.
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <button type="submit" class="btn btn-primary btn-lg signup-btn" ng-disabled="signupForm.$invalid">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+        <span class="route-tag"><a ui-sref="app">Back to Login</a></span>
+    </div>
+</section>

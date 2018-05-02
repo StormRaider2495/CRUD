@@ -1,0 +1,28 @@
+[{
+        "name": "Kimberley Hart",
+        "age": 47,
+        "gender": "female",
+        "email": "kimberleyhart@zaj.com",
+        "phone": "(846) 402-3831",
+        "address": "156 Indiana Place, Whitewater, Maine, 5100",
+        "subject": "Java"
+    },
+    {
+        "name": "Vivian Adams",
+        "age": 28,
+        "gender": "female",
+        "email": "vivianadams@zaj.com",
+        "phone": "(982) 599-2713",
+        "address": "614 Kay Court, Salvo, Palau, 7490",
+        "subject": "OS"
+    },
+    {
+        "name": "Boyer Gomez",
+        "age": 51,
+        "gender": "male",
+        "email": "boyergomez@zaj.com",
+        "phone": "(871) 418-2332",
+        "address": "323 Buffalo Avenue, Gulf, Utah, 3818",
+        "subject": "DBMS"
+    }
+]

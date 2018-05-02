@@ -1,0 +1,56 @@
+<div ng-controller="StudentController">
+
+    <div class="container">
+        <h2>Welcome Students!</h2>
+
+
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" data-target="#studentinfo">Student Info</a></li>
+            <li><a data-toggle="pill" data-target="#teacherinfo">Teacher Info</a></li>
+        </ul>
+
+
+        <div class="tab-content">
+
+            <div id="studentinfo" class="tab-pane fade in active">
+                <h3>Students Info</h3>
+                <div class="card-data">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="(key,value) in students[0]">{{key | capitalize}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="student in students">
+                                <td ng-repeat="data in student">
+                                    {{data}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="teacherinfo" class="tab-pane fade">
+                <h3>Teachers Info</h3>
+                <div class="card-data">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="(key,value) in teachers[0]">{{key | capitalize}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="teacher in teachers">
+                                <td ng-repeat="data in teacher">
+                                    {{data}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

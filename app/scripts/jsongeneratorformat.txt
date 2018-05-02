@@ -1,0 +1,15 @@
+------------------------ www.json-generator.com ------------------------
+student data format
+[
+  '{{repeat(7,15)}}',
+  {
+    index: '{{index()}}',
+    name: '{{firstName()}} {{surname()}}',
+     age: '{{integer(19, 22)}}',
+    gender: '{{gender()}}',
+    email: '{{email()}}',
+    phone: '{{phone()}}',
+    address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    cgpa: '{{integer(6,10)}}'
+  }
+]

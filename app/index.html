@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>C.R.U.D</title>
+
+    <!-- build:css styles/main.css -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="crudApp">
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
+    <div ui-view="footer"></div>
+
+    <!-- build:js scripts/main.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.config.js"></script>
+    <script src="scripts/controllers/login.controller.js"></script>
+    <script src="scripts/controllers/signup.controller.js"></script>
+    <script src="scripts/controllers/student.controller.js"></script>
+    <script src="scripts/controllers/teacher.controller.js"></script>
+    <script src="scripts/controllers/admin.controller.js"></script>
+
+    <script src="scripts/services/userdata.service.js"></script>
+    <script src="scripts/services/studentdata.service.js"></script>
+    <script src="scripts/services/teacherdata.service.js"></script>
+    <script src="scripts/services/view.service.js"></script>
+    <script src="scripts/services/updatedata.service.js"></script>
+
+    <script src="scripts/filters/captitalize.filter.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>
